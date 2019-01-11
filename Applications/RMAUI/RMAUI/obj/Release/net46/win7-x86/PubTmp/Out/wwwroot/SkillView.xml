@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList name=".NET">  
+  <category name="programming language">
+    <skill id="1" name="C#"/>
+    <Skill id="2" name="VB.NET"/>
+    <skill id="3" name="Python"/>
+    <skill id="4" name="C++"/>
+    <skill id="5" name="Cobra"/>
+    <skill id="6" name="JScript.NET"/>
+    <skill id="7" name="PowerBuilder"/>
+    <skill id="8" name="Windows PowerShell"/>
+    <skill id="9" name="F#"/>
+    <Skill id="10" name="J#"/>
+    <skill id="11" name="T-SQL"/>
+  </category>
+  
+  <category name="Technologies">
+    <skill id="1" name="WindowsService"/>
+    <skill id="2" name="Web Service"/>
+    <skill id="3" name="WCF Soap"/>
+    <skill id="4" name="WCF Rest"/>
+    <skill id="5" name="Web Api"/>
+    <skill id="6" name="ASP.NET"/>
+    <skill id="7" name="ADO.NET"/>
+    <skill id="8" name="Linq"/>
+    <skill id="9" name="ASP.NET MVC"/>
+  </category>
+  
+  <category name="Source Control">
+    <skill id="1" name="TFS"/>
+    <skill id="2" name="SVN"/>
+    <skill id="3" name="GitHub"/>
+    <skill id="4" name="JIRA"/>
+  </category> 
+  
+  <category name="User Interface">
+    <skill id="1" name="HTML"/>
+    <skill id="2" name="CSS"/>
+    <skill id="3" name="JavaScript"/>
+    <skill id="4" name="BootStrap"/>
+    <skill id="5" name="Jquery"/>
+    <skill id="6" name="Ajax"/>
+    <skill id="7" name="XML"/>
+    <skill id="8" name="Angular JS"/>
+    <skill id="9" name="Telerik"/>
+    <skill id="10" name="Node JS"/>
+    <skill id="11" name="Express JS"/>
+    <skill id="12" name="Kindo UI"/>  
+  </category>
+  
+  <category name="DataBase">
+    <skill id="1" name="Sql Server"/>
+    <skill id="2" name="Access"/>
+    <skill id="3" name="Oracle"/>
+    <skill id="4" name="MySql"/>
+    <skill id="5" name="MongoDB"/>
+  </category>
+  
+  <category name="Reporting Tools">
+    <skill id="1" name="SSRS"/>
+    <skill id="2" name="SSIS"/>
+    <skill id="3" name="Crystal Reports"/>
+    <skill id="4" name="Telerik Reporting Components"/>
+    <skill id="5" name="Microft Reporting"/>
+    <skill id="6" name="SQL Reporting Services"/>
+    <skill id="7" name="SAP Crystal Reports"/>
+    <skill id="8" name="Cognos"/>
+  </category>
+
+  <category name="Testing FrameWorks">
+    <skill id="1" name="NUnit"/>
+    <skill id="2" name="XUnit"/>
+    <skill id="3" name="MSTest"/>
+    <skill id="4" name="Moq"/>
+    <skill id="5" name="MbUnit"/>
+    <skill id="6" name="Rhino Mock"/>
+
+
+
+
+
+  </category>
+  <category name="Methodologies">
+    <skill id="1" name="Agile"/>
+    <skill id="2" name="SCURM"/>
+    <skill id="3" name="WaterFall"/>  
+  </category>
+
+  <category name="General">
+    <skill id="1" name="IIS"/>
+    <skill id="2" name="Entity FrameWork"/>
+    <skill id="3" name="ADO.NET"/>
+    <skill id="4" name="Dependency Injection"/>
+    <skill id="5" name="Oops"/>
+    <skill id="6" name="Design Patterns"/>
+    <skill id="7" name="T-Sql"/>
+    <skill id="8" name="NHibernate"/>
+    <skill id="9" name="Xml"/>
+    
+
+
+
+
+
+
+  </category>
+</SkillsList>

@@ -1,0 +1,10 @@
+﻿.k-content{
+    min-height: 400px;
+}
+.ReToolTip {
+    display: inline-block;
+}
+
+#tabstrip .k-content.k-state-active{
+    overflow: hidden;
+}

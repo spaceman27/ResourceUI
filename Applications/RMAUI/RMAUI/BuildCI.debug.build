@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<RMACommon Include="..\..\..\RMA.Common" />
+		<NUnit Include="..\packages\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe" />
+				
+		<TestProjectFile1 Include="..\Login.Test.Controller\Login.Tests.Controller.csproj" />
+		<TestAssembly1 Include="..\Login.Test.Controller\bin\Debug\Login.Tests.Controller.dll" />
+				
+		<!--TestProjectFile2 Include="..\Login.Tests.Model\Login.Tests.Model.csproj" />
+		<TestAssembly2 Include="..\Login.Tests.Model\bin\Debug\Login.Tests.Model.dll" /-->		
+		<TestResult Include="..\TestResults\TestResult.xml" />
+	</ItemGroup>
+
+	<Target Name="BuildRMAObject">
+		<MSBuild Projects="%(RMACommon.FullPath)\RMAObjects\RMAObjects.csproj" />
+	</Target>
+
+	<Target Name="BuildRMADal" DependsOnTargets="BuildRMAObject">
+		<MSBuild Projects="%(RMACommon.FullPath)\RMADal\RMADal.csproj" />
+	</Target>
+	
+	<Target Name="RestoreBower">		
+		<Exec Command="bower install"/>		
+	</Target>
+	
+	<Target Name="BuildRMSDependency" DependsOnTargets="BuildRMADal;RestoreBower">
+		
+	</Target>
+
+	<Target Name="BuildTest" DependsOnTargets="">
+		<MSBuild Projects="@(TestProjectFile1)" />
+	</Target>
+	
+	<Target Name="RunNunit" DependsOnTargets="BuildTest">		
+		<!--Exec Command="@(NUnit) @(TestAssembly1)" />		-->
+	</Target>
+	
+	<Target Name="DoRunner" DependsOnTargets="RunNunit"></Target>
+</Project>

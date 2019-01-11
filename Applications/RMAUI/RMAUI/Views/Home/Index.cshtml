@@ -1,0 +1,71 @@
+﻿@using System.Security.Claims
+@using System.Threading
+@using RMADal
+@using RMAUI.BL
+@{
+    ViewData["Title"] = "Resource Management System";
+
+    var userPermission = new UserPermissionMapping();
+    var username = User.Identity.Name.Substring(User.Identity.Name.IndexOf("\\", StringComparison.Ordinal) + 1);
+    var projectSchedule = userPermission.GetUserRightOfModule(username, Enums.Modules.ProjectSchedule);
+    var assignment = userPermission.GetUserRightOfModule(username, Enums.Modules.Assignment);
+    var developer = userPermission.GetUserRightOfModule(username, Enums.Modules.DeveloperAssignment);
+    var schedule = userPermission.GetUserRightOfModule(username, Enums.Modules.Schedule);
+    var UserAndGroup = userPermission.GetUserRightOfModule(username, Enums.Modules.ManageUserAndGroup);
+}
+
+
+<!--<div id="hereSPA" asp-prerender-module="wwwroot/dist/main"
+     asp-prerender-data="new {
+                    UserName = User.Identity.Name,
+                    Cookies = ViewContext.HttpContext.Request.Cookies
+                 }">
+
+</div>-->
+<link rel="stylesheet" href="css/kendo/bundle.css" />
+<div id="hereSPA"></div>
+<script id="template" type="text/x-kendo-template">
+    #var element = target.is(".k-task") ? target : target.parent();#
+    #var uid = element.attr("data-uid");#
+    #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+    #var model = scheduler.occurrenceByUid(uid);#
+    #if(model) {#
+    <strong>Owner:</strong> #=model.owner#
+    <br />
+    <strong>Assigned By:</strong> #=model.assignedBy#
+    <br />
+    #} else {#
+    <strong>Unknown Assigner</strong>
+    #}#
+</script>
+<script id="resourceTemplate" type="text/x-kendo-template">
+    <input type="checkbox" class="k-checkbox" #: (employee.indexOf(Name)!==-1?'checked=checked':'')#>
+    <label class="k-checkbox-label"> #: Name#</label>
+</script>
+
+<script id="developerTemplate" type="text/x-kendo-template">
+    #var element = target.is(".k-task") ? target : target.parent();#
+    #var uid = element.attr("data-uid");#
+    #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+    #var model = scheduler.occurrenceByUid(uid);#
+    #if(model) {#
+    <strong>Owner:</strong> #=model.owner#
+    <br />
+    <strong>Assigned By:</strong> #=model.assignedBy#
+    <br />
+    #} else {#
+    <strong>Unknown Assigner</strong>
+    #}#
+</script>
+
+<script type="text/javascript">
+    window.developerPermission =  @Json.Serialize(developer);
+    window.schedulePermission  = @Json.Serialize(schedule);
+    window.projectSchedulePermission = @Json.Serialize(projectSchedule);
+    window.assignmentPermission = @Json.Serialize(assignment);
+    window.UserAndGroupPermission = @Json.Serialize(UserAndGroup);
+    window.currentLoggedUser = "@username";
+</script>
+
+<script src="dist/bundle.js"></script>
+<script src="dist/main.js"></script>

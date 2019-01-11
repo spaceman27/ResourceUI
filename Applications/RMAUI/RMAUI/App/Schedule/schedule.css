@@ -1,0 +1,22 @@
+.FilterCol{
+    width: 105px;
+}
+.filterTable{
+    width: 723px;
+}
+.k-header.date-input{    
+    width: 110px;
+}
+.date-input.k-input {
+    height: 28px;
+}
+.hour-input.k-textbox{
+    width: 110px;
+    height: 34px;
+}
+.reset{
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 628px;
+    display: inline-block;
+}

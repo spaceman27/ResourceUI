@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="WebDeploy" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\vstOnline\\WIP\\Dev\\Applications\\RMAUI\\RMAUI\\obj\\Release\\net46\\win7-x86\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

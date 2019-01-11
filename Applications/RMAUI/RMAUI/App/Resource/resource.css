@@ -1,0 +1,128 @@
+﻿.inlineBlock {
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.add-button-oval {
+    border-radius: 100%;
+    background: #ccc;
+    height: 24px;
+    width: 24px;
+}
+
+.select-model {
+    width: 112px;
+    margin-top: 2px;
+    height: 18px;
+    font-size:12px;
+}
+
+.projectModel {
+    width:112px;
+    margin-top:2px;
+    font-size:12px;
+    height:41px;
+}
+
+#logHours {
+    height: 602px;
+    font-size:12px;
+}
+
+.mygrid .k-grid-header .k-header{
+    background-color: #3f51b5;
+}
+.mygrid {
+    padding-right:12px;
+    padding-left:12px;
+}
+.mytable:after {
+    clear:both;
+}
+@media (min-width: 1200px){
+    .container{
+        width:1200px;
+    }
+
+    .mygrid{
+        width:819px;
+    }
+    .mytable {
+        width:365px;
+    }
+}
+@media (min-width:1400px) {
+    .container{
+        width:1330px;
+    }
+    .mygrid{
+        width:875px;
+    }
+    .mytable{
+        width:439px;
+    }
+}
+@media (min-width:1600px) {
+    .container{
+        width:1465px;
+    }
+    .mygrid{
+        width:969px;
+    }
+    .mytable {
+        width:480px;
+    }
+}
+@media (min-width:1900px) {
+    .container {
+        width:1550px;
+    }
+
+    .mygrid {
+        width:1000px;
+    }
+
+    .mytable {
+        width:538px;
+    }
+}
+
+.clear {
+    text-indent:-1000em;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url(http://p.yusukekamiyamane.com/icons/search/fugue/icons/cross.png);
+    background-repeat: no-repeat;
+    /*position: relative;
+    left: -20px;
+    top: 3px;*/
+}
+
+.item-1 {
+    float: left;
+    width: 80%;
+}
+
+.forNoScroll {
+    display: block;
+}
+
+.hours {
+    margin-left: 30px;
+}
+
+
+.hourCell {
+    padding:2px;
+}
+
+.item-2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.cell-container {
+    position: relative;
+}
